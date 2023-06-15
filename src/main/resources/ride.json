@@ -43,7 +43,7 @@
         "reg_queue": [],
         "exp_queue": []
     },
-    "trapizoid": {
+    "trapezoid": {
         "run_time": 4,
         "hourly_throughput": 1000,
         "popularity": 10,

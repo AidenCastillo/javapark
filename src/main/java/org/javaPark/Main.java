@@ -1,6 +1,6 @@
-package org.example;
+package org.javapark;
 
-import org.example.ParkSim.Simulation;
+import org.javapark.ParkSim.Simulation;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class Main {
 //                System.out.println(mode);
 //                Selection = false;
 //            }
-            Simulation parkInstance = new Simulation(100);
+            Simulation parkInstance = new Simulation(mode);
             parkInstance.main(mode);
 
         } catch(Exception e) {

@@ -1,15 +1,32 @@
-package org.example.ParkSim;
+package org.javapark.ParkSim;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Map;
+
 public class Person {
 
-    private int tag;
-    private String arche;
+    private final int tag;
+    private final String arche;
     private String location;
-    private Boolean expeditedAbility;
-    public Person(int createdTag, String createdArche, String createdLocation, Boolean createdExpetitedAbility) {
+    private final Boolean expeditedAbility;
+    private final int waitInLineTime;
+//    private final int stayInParkTime;
+    public Person(int createdTag, String createdArche, String createdLocation, Boolean createdExpetitedAbility) throws IOException {
         this.tag = createdTag;
         this.arche = createdArche;
         this.location = createdLocation;
         this.expeditedAbility = createdExpetitedAbility;
+        this.waitInLineTime = setWaitInLinetime();
+    }
+    private int setWaitInLinetime() throws IOException {
+        Path currentRelativePath = Paths.get("");
+        String currentPath = currentRelativePath.toAbsolutePath().toString();
+        ObjectMapper mapper = new ObjectMapper();
+        Map<?,?> map = mapper.readValue(Paths.get(currentPath + "/src/main/resources/archetype.json").toFile(), Map.class);
+        Map<?,?> archetype = (Map<?, ?>) map.get(this.getArche());
+        return (int) archetype.get("waitInLineTime");
     }
 
     public int getTag() {
@@ -28,7 +45,15 @@ public class Person {
         return expeditedAbility;
     }
 
+    public int getWaitInLineTime() {
+        return waitInLineTime;
+    }
+
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getArcheType() {
+        return this.arche;
     }
 }
