@@ -1,0 +1,26 @@
+{
+    "tourist": {
+        "stay": 7,
+        "wait": 2
+    },
+    "visitor": {
+        "stay": 4,
+        "wait": 2
+    },
+    "ride_enthusiast": {
+        "stay": 7,
+        "wait": 4
+    },
+    "ride_favorer": {
+        "stay": 7,
+        "wait": 3
+    },
+    "activity_enthusiast": {
+        "stay": 7,
+        "wait": 4
+    },
+    "activity_favorer": {
+        "stay": 4,
+        "wait": 3
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "regular": {
+        "seed": 5,
+        "fastPass": "paper",
+        "populationSize": 10000,
+        "hourlyRate": {
+            "8": 10,
+            "9": 20,
+            "10": 17,
+            "11": 20,
+            "12": 15,
+            "13": 10,
+            "14": 1,
+            "15": 5,
+            "16": 1,
+            "17": 1,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+        },
+        "expAbilityPercent": 0.7,
+        "exp_threshold": 1,
+        "exp_limit": 3,
+        "agentDistribution": {
+            "tourist": 25,
+            "visitor": 25,
+            "rideFavorer": 15,
+            "rideEnthusiast": 15,
+            "activityFavorer": 15,
+            "activityEnthusiast": 5
+        }
+    },
+    "digital" : {
+        "population": 10000
+    }
+
+}
