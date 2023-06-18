@@ -1,26 +1,38 @@
 {
     "tourist": {
         "stay": 7,
-        "waitInLineTime": 2
+        "waitInLineTime": 2,
+        "rideBonus": 1,
+        "activityBonus": 1
     },
     "visitor": {
         "stay": 4,
-        "waitInLineTime": 2
+        "waitInLineTime": 2,
+        "rideBonus": 1,
+        "activityBonus": 1
     },
     "rideEnthusiast": {
         "stay": 7,
-        "waitInLineTime": 4
+        "waitInLineTime": 4,
+        "rideBonus": 3,
+        "activityBonus": 1
     },
     "rideFavorer": {
         "stay": 7,
-        "waitInLineTime": 3
+        "waitInLineTime": 3,
+        "rideBonus": 2,
+        "activityBonus": 1
     },
     "activityEnthusiast": {
         "stay": 7,
-        "waitInLineTime": 4
+        "waitInLineTime": 4,
+        "rideBonus": 1,
+        "activityBonus": 3
     },
     "activityFavorer": {
         "stay": 4,
-        "waitInLineTime": 3
+        "waitInLineTime": 3,
+        "rideBonus": 1,
+        "activityBonus": 2
     }
 }

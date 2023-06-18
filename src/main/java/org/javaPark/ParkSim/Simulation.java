@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class Simulation {
+    private final ArrayList<Object> rides;
     // create a constructor with an array list named population containing the object of ParkSim.Person
     private ArrayList<Person> population;
     private int populationSize;
     private final Settings settings;
     private int time;
-    private ArrayList<Ride> rides;
 
     public Simulation(String mode) throws IOException {
         this.population = new ArrayList<>(this.populationSize);
@@ -74,18 +74,22 @@ public class Simulation {
         System.out.println(this.population.size());
     }
     private void updateLocation() {
-
+        // for loop that updates the location of each person in the population based on ride popularity
+        
     }
 
     public void main(String args) throws IOException {
         System.out.println("Simulation started");
         // Create rides
-
+        Map<?,?> map = (Map<?, ?>) Ride.getRideFile();
+        System.out.println(map.keySet());
+        for (Object ride : map.keySet()) {
+            this.rides.add(new Ride(ride.toString()));
+        }
         // Run
         for (int i = 0; i < 14; i++){
             addToPopulation();
             updateLocation();
-
 
 
             this.time++;
